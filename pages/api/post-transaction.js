@@ -20,6 +20,8 @@ export default async function handler(req, res) {
           message: "A transaction with this ID already exists",
         });
       }
+    } finally {
+      prisma.$disconnect();
     }
   } else {
     res.status(405).json({
