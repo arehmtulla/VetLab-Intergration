@@ -87,10 +87,6 @@ TablePaginationActions.propTypes = {
   rowsPerPage: PropTypes.number.isRequired,
 };
 
-function createData(name, calories, fat) {
-  return { name, calories, fat, abx: "dx" };
-}
-
 export default function TransactionTable() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -117,7 +113,7 @@ export default function TransactionTable() {
   }, []);
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} sx={{ minHeight: "95vh" }}>
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Typography variant="h4" sx={{ p: 3 }}>
           Transactions
