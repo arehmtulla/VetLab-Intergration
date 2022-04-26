@@ -10,14 +10,13 @@ import Sidebar from '../components/Sidebar';
 
 export default function Home() {
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', backgroundColor: "f1f1f4" }}>
       <Head>
         <title>Home</title>
         <meta name="description" content="Vetlab Dashboard" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <CssBaseline />
-      <Navbar />
       <Sidebar />
       <Box component="main" sx={{ flexGrow: 1, p: 3,}}>
         <Toolbar />
